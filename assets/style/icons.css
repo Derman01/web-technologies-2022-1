@@ -1,0 +1,17 @@
+.icon-folder::before {
+    content: url(../svg/folder.svg);
+    position: relative;
+}
+.icon-folder {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.icon-arrow::before {
+    content: url(../svg/arrow-down.svg);
+    position: relative;
+}
+.icon-arrow-up::before {
+    transform: rotate(180deg);;
+}

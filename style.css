@@ -1,4 +1,5 @@
 @import url('assets/style/fonts.css');
+@import url('assets/style/icons.css');
 
 body {
     margin: 0;
@@ -17,4 +18,41 @@ body {
 
 html {
     font-family: 'HelveticaNeueCyr', sans-serif;
+}
+
+.folder-parent {
+    position: relative;
+    cursor: pointer;
+    width: max-content;
+}
+
+.folder-children {
+    width: max-content;
+    display: none;
+    flex-direction: column;
+    margin-left: 30px;
+    gap: 10px;
+}
+.folder-parent::after {
+    content: url(./assets/svg/arrow-down.svg);
+    position: relative;
+    display: inline;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: -30px;
+    transform: rotate(-180deg);
+}
+
+.folder-parent.close::after {
+    transform: rotate(0deg);
+}
+
+.folder-children.visible {
+    display: flex;
+}
+
+.folder-title {
+    height: 24px;
 }
